@@ -78,7 +78,7 @@ tar_quarto_files_document <- function(path, quiet) {
 }
 
 tar_quarto_files_project <- function(path, quiet) {
-  info <- quarto::quarto_inspect(input = path, quiet)
+  info <- quarto::quarto_inspect(input = path, quiet = quiet)
   targets::tar_assert_nonempty(
     info$config$project$`output-dir`,
     paste(
